@@ -74,8 +74,8 @@ export default function RecruiterDashboard() {
   const busy = loading || opening;
 
   return (
-    <div className="grid gap-4 sm:gap-6 lg:grid-cols-[22rem_1fr]">
-      <aside className="space-y-3 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:space-y-4 lg:self-start lg:overflow-y-auto lg:pr-1">
+   <div className="grid grid-cols-[minmax(0,1fr)] gap-4 sm:gap-6 lg:grid-cols-[22rem_minmax(0,1fr)]">
+      <aside className="min-w-0 space-y-3 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:space-y-4 lg:self-start lg:overflow-y-auto lg:pr-1">
         <button onClick={() => setFormOpen((o) => !o)} className="btn-ghost w-full justify-between lg:hidden" aria-expanded={formOpen}>
           <span className="flex items-center gap-2"><Users size={16} className="text-brand-600" /> Screen candidates</span>
           <ChevronDown size={16} className={`transition-transform ${formOpen ? 'rotate-180' : ''}`} />
