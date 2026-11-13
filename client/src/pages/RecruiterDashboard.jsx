@@ -119,7 +119,7 @@ export default function RecruiterDashboard() {
         {busy ? (
           <BoardSkeleton rows={Math.min(Math.max(files.length, 4), 8)} />
         ) : board ? (
-          <div className="animate-fade-up">
+          <div>
             <RecruiterBoard key={board.batchId} candidates={board.candidates} failed={board.failed} targetRole={board.targetRole || targetRole} />
           </div>
         ) : (
